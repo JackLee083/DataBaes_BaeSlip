@@ -1,5 +1,7 @@
 # BaeSlip
 
+[![ci](https://github.com/JackLee083/DataBaes_BaeSlip/actions/workflows/ci.yml/badge.svg)](https://github.com/JackLee083/DataBaes_BaeSlip/actions/workflows/ci.yml)
+
 **Income that institutions can read.**
 
 BaeSlip turns income scattered across jobs, apps and bank deposits into one **signed, scannable proof** that the worker controls. It is built for people whose income doesn't come as three tidy payslips: casual and shift workers, gig and platform workers, freelancers, and international students working under a visa hours cap.
