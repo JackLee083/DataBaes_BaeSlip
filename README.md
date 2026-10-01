@@ -287,3 +287,13 @@ What this demo does not do, stated plainly:
 ## Team
 
 **Data Baes**, 2026 FEIT Hackathon, University of Melbourne.
+
+- [Pin Ju Chiu](https://github.com/pinjuchiu)
+- [Tzu-Hsun Hsu](https://github.com/tzuhsunhsu)
+- [Yi-Ting Huang](https://github.com/yiitiing)
+- [Jack Lee](https://github.com/JackLee083)
+- [alicezihyi](https://github.com/alicezihyi)
+
+## License
+
+No license is granted: all rights are reserved by the team. You are welcome to read the code; please ask before reusing it.
