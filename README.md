@@ -4,6 +4,8 @@
 
 **Income that institutions can read.**
 
+📄 **[Pitch deck (PDF, 3 slides)](DataBaes_BaeSlip.pdf)**
+
 BaeSlip turns income scattered across jobs, apps and bank deposits into one **signed, scannable proof** that the worker controls. It is built for people whose income doesn't come as three tidy payslips: casual and shift workers, gig and platform workers, freelancers, and international students working under a visa hours cap.
 
 Built by team **Data Baes** for the 2026 FEIT Hackathon, Airwallex Problem 2: *"Income without a payslip: what does financial infrastructure look like when irregular income is the default?"*
@@ -264,6 +266,7 @@ schema/           JSON Schema of the proof (the standard)
 fixtures/         Example API responses; the contract between backend and frontend
 scripts/          setup.sh, the contract check, fixture signing and the phone demo launcher
 assets/           Screenshots used in this README
+DataBaes_BaeSlip.pdf  The three-slide pitch deck
 ```
 
 ## Status and limitations
