@@ -1,0 +1,68 @@
+{
+  "status": "expired",
+  "signature_valid": true,
+  "attestation": {
+    "spec_version": "0.1",
+    "attestation_id": "att_Hs8dW1nY4cR",
+    "scope": "rental",
+    "subject": {
+      "display_name": "Mei L."
+    },
+    "issuer": {
+      "issuer_id": "baeslip-demo",
+      "name": "BaeSlip Demo Issuer",
+      "key_id": "k1"
+    },
+    "period": {
+      "start": "2026-04-01",
+      "end": "2026-07-31"
+    },
+    "sources": [
+      {
+        "label": "Hospitality (casual)",
+        "type": "employment",
+        "tier": "A",
+        "evidence": [
+          "stp_income_statement",
+          "bank_deposit"
+        ]
+      },
+      {
+        "label": "Food delivery platform",
+        "type": "platform",
+        "tier": "B",
+        "evidence": [
+          "platform_statement",
+          "bank_deposit"
+        ]
+      },
+      {
+        "label": "Overseas design contracts",
+        "type": "overseas_contract",
+        "tier": "C",
+        "evidence": [
+          "invoice",
+          "bank_deposit"
+        ]
+      }
+    ],
+    "summary": {
+      "currency": "AUD",
+      "monthly_income_range": {
+        "low": 2300,
+        "high": 3100
+      },
+      "monthly_median": 2715,
+      "coverage": {
+        "months_with_data": 4,
+        "months_in_period": 4
+      }
+    },
+    "issued_at": "2026-08-20T10:00:00+10:00",
+    "expires_at": "2026-09-19T10:00:00+10:00",
+    "signature": {
+      "alg": "Ed25519",
+      "value": "ZubZF+8tkpK6iE/2CQIrA2Q267/javJXXU6hiHbH+7D9Z67t+gsh9Tl0N4TJaIZ/LCGWnW81T35Qit0OCGmMAg=="
+    }
+  }
+}

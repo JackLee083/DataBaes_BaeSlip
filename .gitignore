@@ -1,0 +1,15 @@
+.DS_Store
+# secrets
+.env
+.env.*
+backend/keys/
+# python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+# node
+node_modules/
+frontend/dist/
+# runtime data
+backend/app/data/attestations.json

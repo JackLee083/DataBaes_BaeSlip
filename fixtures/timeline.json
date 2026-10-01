@@ -1,0 +1,815 @@
+{
+  "worker_id": "mei",
+  "display_name": "Mei L.",
+  "language": "en",
+  "period": {
+    "start": "2026-04-01",
+    "end": "2026-09-30"
+  },
+  "sources": [
+    {
+      "source_id": "abc-cafe",
+      "label": "Hospitality (casual)",
+      "type": "employment",
+      "tier": "A",
+      "evidence": [
+        "stp_income_statement",
+        "bank_deposit"
+      ]
+    },
+    {
+      "source_id": "delivery-co",
+      "label": "Food delivery platform",
+      "type": "platform",
+      "tier": "B",
+      "evidence": [
+        "platform_statement",
+        "bank_deposit"
+      ]
+    },
+    {
+      "source_id": "studio-sg",
+      "label": "Overseas design contracts",
+      "type": "overseas_contract",
+      "tier": "C",
+      "evidence": [
+        "invoice",
+        "bank_deposit"
+      ]
+    },
+    {
+      "source_id": "cash-tutoring",
+      "label": "Private tutoring (cash)",
+      "type": "cash",
+      "tier": "D",
+      "evidence": [
+        "self_reported"
+      ]
+    }
+  ],
+  "records": [
+    {
+      "record_id": "inc_001",
+      "source_id": "delivery-co",
+      "period_start": "2026-03-30",
+      "period_end": "2026-04-05",
+      "gross_cents": 19800,
+      "net_cents": 19800,
+      "paid_on": "2026-04-06",
+      "evidence": [
+        "platform_statement",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "tier": "B"
+    },
+    {
+      "record_id": "inc_002",
+      "source_id": "delivery-co",
+      "period_start": "2026-04-06",
+      "period_end": "2026-04-12",
+      "gross_cents": 19800,
+      "net_cents": 19800,
+      "paid_on": "2026-04-13",
+      "evidence": [
+        "platform_statement",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "tier": "B"
+    },
+    {
+      "record_id": "inc_003",
+      "source_id": "abc-cafe",
+      "period_start": "2026-03-31",
+      "period_end": "2026-04-13",
+      "gross_cents": 66100,
+      "net_cents": 66100,
+      "paid_on": "2026-04-15",
+      "evidence": [
+        "stp_income_statement",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "tier": "A"
+    },
+    {
+      "record_id": "inc_004",
+      "source_id": "studio-sg",
+      "period_start": "2026-04-01",
+      "period_end": "2026-04-14",
+      "gross_cents": 33600,
+      "net_cents": 33600,
+      "paid_on": "2026-04-17",
+      "evidence": [
+        "invoice",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "original_amount_cents": 22400,
+      "original_currency": "USD",
+      "tier": "C"
+    },
+    {
+      "record_id": "inc_005",
+      "source_id": "delivery-co",
+      "period_start": "2026-04-13",
+      "period_end": "2026-04-19",
+      "gross_cents": 19800,
+      "net_cents": 19800,
+      "paid_on": "2026-04-20",
+      "evidence": [
+        "platform_statement",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "tier": "B"
+    },
+    {
+      "record_id": "inc_006",
+      "source_id": "delivery-co",
+      "period_start": "2026-04-20",
+      "period_end": "2026-04-26",
+      "gross_cents": 19800,
+      "net_cents": 19800,
+      "paid_on": "2026-04-27",
+      "evidence": [
+        "platform_statement",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "tier": "B"
+    },
+    {
+      "record_id": "inc_007",
+      "source_id": "abc-cafe",
+      "period_start": "2026-04-14",
+      "period_end": "2026-04-27",
+      "gross_cents": 66100,
+      "net_cents": 66100,
+      "paid_on": "2026-04-29",
+      "evidence": [
+        "stp_income_statement",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "tier": "A"
+    },
+    {
+      "record_id": "inc_008",
+      "source_id": "delivery-co",
+      "period_start": "2026-04-27",
+      "period_end": "2026-05-03",
+      "gross_cents": 16500,
+      "net_cents": 16500,
+      "paid_on": "2026-05-04",
+      "evidence": [
+        "platform_statement",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "tier": "B"
+    },
+    {
+      "record_id": "inc_009",
+      "source_id": "delivery-co",
+      "period_start": "2026-05-04",
+      "period_end": "2026-05-10",
+      "gross_cents": 16500,
+      "net_cents": 16500,
+      "paid_on": "2026-05-11",
+      "evidence": [
+        "platform_statement",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "tier": "B"
+    },
+    {
+      "record_id": "inc_010",
+      "source_id": "abc-cafe",
+      "period_start": "2026-04-28",
+      "period_end": "2026-05-11",
+      "gross_cents": 66100,
+      "net_cents": 66100,
+      "paid_on": "2026-05-13",
+      "evidence": [
+        "stp_income_statement",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "tier": "A"
+    },
+    {
+      "record_id": "inc_011",
+      "source_id": "delivery-co",
+      "period_start": "2026-05-11",
+      "period_end": "2026-05-17",
+      "gross_cents": 16500,
+      "net_cents": 16500,
+      "paid_on": "2026-05-18",
+      "evidence": [
+        "platform_statement",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "tier": "B"
+    },
+    {
+      "record_id": "inc_012",
+      "source_id": "studio-sg",
+      "period_start": "2026-05-01",
+      "period_end": "2026-05-15",
+      "gross_cents": 38410,
+      "net_cents": 38410,
+      "paid_on": "2026-05-19",
+      "evidence": [
+        "invoice",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "original_amount_cents": 25600,
+      "original_currency": "USD",
+      "tier": "C"
+    },
+    {
+      "record_id": "inc_013",
+      "source_id": "delivery-co",
+      "period_start": "2026-05-18",
+      "period_end": "2026-05-24",
+      "gross_cents": 16500,
+      "net_cents": 16500,
+      "paid_on": "2026-05-25",
+      "evidence": [
+        "platform_statement",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "tier": "B"
+    },
+    {
+      "record_id": "inc_014",
+      "source_id": "abc-cafe",
+      "period_start": "2026-05-12",
+      "period_end": "2026-05-25",
+      "gross_cents": 59490,
+      "net_cents": 59490,
+      "paid_on": "2026-05-27",
+      "evidence": [
+        "stp_income_statement",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "tier": "A"
+    },
+    {
+      "record_id": "inc_015",
+      "source_id": "delivery-co",
+      "period_start": "2026-05-25",
+      "period_end": "2026-05-31",
+      "gross_cents": 19800,
+      "net_cents": 19800,
+      "paid_on": "2026-06-01",
+      "evidence": [
+        "platform_statement",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "tier": "B"
+    },
+    {
+      "record_id": "inc_016",
+      "source_id": "studio-sg",
+      "period_start": "2026-05-18",
+      "period_end": "2026-06-01",
+      "gross_cents": 35000,
+      "net_cents": 35000,
+      "paid_on": "2026-06-05",
+      "evidence": [
+        "invoice",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "original_amount_cents": 23300,
+      "original_currency": "USD",
+      "tier": "C"
+    },
+    {
+      "record_id": "inc_017",
+      "source_id": "delivery-co",
+      "period_start": "2026-06-01",
+      "period_end": "2026-06-07",
+      "gross_cents": 19800,
+      "net_cents": 19800,
+      "paid_on": "2026-06-08",
+      "evidence": [
+        "platform_statement",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "tier": "B"
+    },
+    {
+      "record_id": "inc_018",
+      "source_id": "abc-cafe",
+      "period_start": "2026-05-26",
+      "period_end": "2026-06-08",
+      "gross_cents": 66100,
+      "net_cents": 66100,
+      "paid_on": "2026-06-10",
+      "evidence": [
+        "stp_income_statement",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "tier": "A"
+    },
+    {
+      "record_id": "inc_019",
+      "source_id": "delivery-co",
+      "period_start": "2026-06-08",
+      "period_end": "2026-06-14",
+      "gross_cents": 19800,
+      "net_cents": 19800,
+      "paid_on": "2026-06-15",
+      "evidence": [
+        "platform_statement",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "tier": "B"
+    },
+    {
+      "record_id": "inc_020",
+      "source_id": "delivery-co",
+      "period_start": "2026-06-15",
+      "period_end": "2026-06-21",
+      "gross_cents": 19800,
+      "net_cents": 19800,
+      "paid_on": "2026-06-22",
+      "evidence": [
+        "platform_statement",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "tier": "B"
+    },
+    {
+      "record_id": "inc_021",
+      "source_id": "abc-cafe",
+      "period_start": "2026-06-09",
+      "period_end": "2026-06-22",
+      "gross_cents": 66100,
+      "net_cents": 66100,
+      "paid_on": "2026-06-24",
+      "evidence": [
+        "stp_income_statement",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "tier": "A"
+    },
+    {
+      "record_id": "inc_022",
+      "source_id": "studio-sg",
+      "period_start": "2026-06-08",
+      "period_end": "2026-06-22",
+      "gross_cents": 31800,
+      "net_cents": 31800,
+      "paid_on": "2026-06-26",
+      "evidence": [
+        "invoice",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "original_amount_cents": 21200,
+      "original_currency": "USD",
+      "tier": "C"
+    },
+    {
+      "record_id": "inc_023",
+      "source_id": "delivery-co",
+      "period_start": "2026-06-22",
+      "period_end": "2026-06-28",
+      "gross_cents": 19800,
+      "net_cents": 19800,
+      "paid_on": "2026-06-29",
+      "evidence": [
+        "platform_statement",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "tier": "B"
+    },
+    {
+      "record_id": "inc_024",
+      "source_id": "delivery-co",
+      "period_start": "2026-06-29",
+      "period_end": "2026-07-05",
+      "gross_cents": 19800,
+      "net_cents": 19800,
+      "paid_on": "2026-07-06",
+      "evidence": [
+        "platform_statement",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "tier": "B"
+    },
+    {
+      "record_id": "inc_025",
+      "source_id": "abc-cafe",
+      "period_start": "2026-06-23",
+      "period_end": "2026-07-06",
+      "gross_cents": 72710,
+      "net_cents": 72710,
+      "paid_on": "2026-07-08",
+      "evidence": [
+        "stp_income_statement",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "tier": "A"
+    },
+    {
+      "record_id": "inc_026",
+      "source_id": "studio-sg",
+      "period_start": "2026-06-23",
+      "period_end": "2026-07-07",
+      "gross_cents": 42000,
+      "net_cents": 42000,
+      "paid_on": "2026-07-10",
+      "evidence": [
+        "invoice",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "original_amount_cents": 28000,
+      "original_currency": "USD",
+      "tier": "C"
+    },
+    {
+      "record_id": "inc_027",
+      "source_id": "delivery-co",
+      "period_start": "2026-07-06",
+      "period_end": "2026-07-12",
+      "gross_cents": 19800,
+      "net_cents": 19800,
+      "paid_on": "2026-07-13",
+      "evidence": [
+        "platform_statement",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "tier": "B"
+    },
+    {
+      "record_id": "inc_028",
+      "source_id": "delivery-co",
+      "period_start": "2026-07-13",
+      "period_end": "2026-07-19",
+      "gross_cents": 19800,
+      "net_cents": 19800,
+      "paid_on": "2026-07-20",
+      "evidence": [
+        "platform_statement",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "tier": "B"
+    },
+    {
+      "record_id": "inc_029",
+      "source_id": "abc-cafe",
+      "period_start": "2026-07-07",
+      "period_end": "2026-07-20",
+      "gross_cents": 72710,
+      "net_cents": 72710,
+      "paid_on": "2026-07-22",
+      "evidence": [
+        "stp_income_statement",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "tier": "A"
+    },
+    {
+      "record_id": "inc_030",
+      "source_id": "studio-sg",
+      "period_start": "2026-07-08",
+      "period_end": "2026-07-21",
+      "gross_cents": 43380,
+      "net_cents": 43380,
+      "paid_on": "2026-07-24",
+      "evidence": [
+        "invoice",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "original_amount_cents": 28900,
+      "original_currency": "USD",
+      "tier": "C"
+    },
+    {
+      "record_id": "inc_031",
+      "source_id": "delivery-co",
+      "period_start": "2026-07-20",
+      "period_end": "2026-07-26",
+      "gross_cents": 19800,
+      "net_cents": 19800,
+      "paid_on": "2026-07-27",
+      "evidence": [
+        "platform_statement",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "tier": "B"
+    },
+    {
+      "record_id": "inc_032",
+      "source_id": "delivery-co",
+      "period_start": "2026-07-27",
+      "period_end": "2026-08-02",
+      "gross_cents": 19800,
+      "net_cents": 19800,
+      "paid_on": "2026-08-03",
+      "evidence": [
+        "platform_statement",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "tier": "B"
+    },
+    {
+      "record_id": "inc_033",
+      "source_id": "abc-cafe",
+      "period_start": "2026-07-21",
+      "period_end": "2026-08-03",
+      "gross_cents": 66100,
+      "net_cents": 66100,
+      "paid_on": "2026-08-05",
+      "evidence": [
+        "stp_income_statement",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "tier": "A"
+    },
+    {
+      "record_id": "inc_034",
+      "source_id": "delivery-co",
+      "period_start": "2026-08-03",
+      "period_end": "2026-08-09",
+      "gross_cents": 19800,
+      "net_cents": 19800,
+      "paid_on": "2026-08-10",
+      "evidence": [
+        "platform_statement",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "tier": "B"
+    },
+    {
+      "record_id": "inc_035",
+      "source_id": "studio-sg",
+      "period_start": "2026-07-27",
+      "period_end": "2026-08-10",
+      "gross_cents": 30800,
+      "net_cents": 30800,
+      "paid_on": "2026-08-14",
+      "evidence": [
+        "invoice",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "original_amount_cents": 20500,
+      "original_currency": "USD",
+      "tier": "C"
+    },
+    {
+      "record_id": "inc_036",
+      "source_id": "cash-tutoring",
+      "period_start": "2026-08-15",
+      "period_end": "2026-08-15",
+      "gross_cents": 6000,
+      "net_cents": 6000,
+      "paid_on": "2026-08-15",
+      "evidence": [
+        "self_reported"
+      ],
+      "currency": "AUD",
+      "tier": "D"
+    },
+    {
+      "record_id": "inc_037",
+      "source_id": "delivery-co",
+      "period_start": "2026-08-10",
+      "period_end": "2026-08-16",
+      "gross_cents": 19800,
+      "net_cents": 19800,
+      "paid_on": "2026-08-17",
+      "evidence": [
+        "platform_statement",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "tier": "B"
+    },
+    {
+      "record_id": "inc_038",
+      "source_id": "abc-cafe",
+      "period_start": "2026-08-04",
+      "period_end": "2026-08-17",
+      "gross_cents": 66100,
+      "net_cents": 66100,
+      "paid_on": "2026-08-19",
+      "evidence": [
+        "stp_income_statement",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "tier": "A"
+    },
+    {
+      "record_id": "inc_039",
+      "source_id": "delivery-co",
+      "period_start": "2026-08-17",
+      "period_end": "2026-08-23",
+      "gross_cents": 19800,
+      "net_cents": 19800,
+      "paid_on": "2026-08-24",
+      "evidence": [
+        "platform_statement",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "tier": "B"
+    },
+    {
+      "record_id": "inc_040",
+      "source_id": "delivery-co",
+      "period_start": "2026-08-24",
+      "period_end": "2026-08-30",
+      "gross_cents": 19800,
+      "net_cents": 19800,
+      "paid_on": "2026-08-31",
+      "evidence": [
+        "platform_statement",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "tier": "B"
+    },
+    {
+      "record_id": "inc_041",
+      "source_id": "abc-cafe",
+      "period_start": "2026-08-18",
+      "period_end": "2026-08-31",
+      "gross_cents": 66100,
+      "net_cents": 66100,
+      "paid_on": "2026-09-02",
+      "evidence": [
+        "stp_income_statement",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "tier": "A"
+    },
+    {
+      "record_id": "inc_042",
+      "source_id": "studio-sg",
+      "period_start": "2026-08-17",
+      "period_end": "2026-08-31",
+      "gross_cents": 48000,
+      "net_cents": 48000,
+      "paid_on": "2026-09-04",
+      "evidence": [
+        "invoice",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "original_amount_cents": 32000,
+      "original_currency": "USD",
+      "tier": "C"
+    },
+    {
+      "record_id": "inc_043",
+      "source_id": "delivery-co",
+      "period_start": "2026-08-31",
+      "period_end": "2026-09-06",
+      "gross_cents": 13200,
+      "net_cents": 13200,
+      "paid_on": "2026-09-07",
+      "evidence": [
+        "platform_statement",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "tier": "B"
+    },
+    {
+      "record_id": "inc_044",
+      "source_id": "delivery-co",
+      "period_start": "2026-09-07",
+      "period_end": "2026-09-13",
+      "gross_cents": 25000,
+      "net_cents": 25000,
+      "paid_on": "2026-09-14",
+      "evidence": [
+        "platform_statement",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "tier": "B"
+    },
+    {
+      "record_id": "inc_045",
+      "source_id": "abc-cafe",
+      "period_start": "2026-09-01",
+      "period_end": "2026-09-14",
+      "gross_cents": 44000,
+      "net_cents": 44000,
+      "paid_on": "2026-09-16",
+      "evidence": [
+        "stp_income_statement",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "tier": "A"
+    },
+    {
+      "record_id": "inc_046",
+      "source_id": "delivery-co",
+      "period_start": "2026-09-14",
+      "period_end": "2026-09-20",
+      "gross_cents": 13200,
+      "net_cents": 13200,
+      "paid_on": "2026-09-21",
+      "evidence": [
+        "platform_statement",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "tier": "B"
+    },
+    {
+      "record_id": "inc_047",
+      "source_id": "studio-sg",
+      "period_start": "2026-09-02",
+      "period_end": "2026-09-18",
+      "gross_cents": 48700,
+      "net_cents": 48700,
+      "paid_on": "2026-09-22",
+      "evidence": [
+        "invoice",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "original_amount_cents": 32500,
+      "original_currency": "USD",
+      "tier": "C"
+    },
+    {
+      "record_id": "inc_048",
+      "source_id": "delivery-co",
+      "period_start": "2026-09-21",
+      "period_end": "2026-09-27",
+      "gross_cents": 19800,
+      "net_cents": 19800,
+      "paid_on": "2026-09-28",
+      "evidence": [
+        "platform_statement",
+        "bank_deposit"
+      ],
+      "currency": "AUD",
+      "tier": "B"
+    }
+  ],
+  "months": {
+    "2026-04": {
+      "net_cents": 245000,
+      "self_reported_cents": 0
+    },
+    "2026-05": {
+      "net_cents": 230000,
+      "self_reported_cents": 0
+    },
+    "2026-06": {
+      "net_cents": 298000,
+      "self_reported_cents": 0
+    },
+    "2026-07": {
+      "net_cents": 310000,
+      "self_reported_cents": 0
+    },
+    "2026-08": {
+      "net_cents": 262000,
+      "self_reported_cents": 6000
+    },
+    "2026-09": {
+      "net_cents": 278000,
+      "self_reported_cents": 0
+    }
+  }
+}

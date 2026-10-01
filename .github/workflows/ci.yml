@@ -1,0 +1,43 @@
+name: ci
+
+on:
+  push:
+    branches: [integration, main]
+  pull_request:
+    branches: [integration, main]
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - id: has
+        run: echo "backend=$([ -f backend/requirements.txt ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+      - if: steps.has.outputs.backend == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: ".python-version"
+      - if: steps.has.outputs.backend == 'true'
+        working-directory: backend
+        run: |
+          pip install -r requirements.txt
+          pytest -q
+      - if: steps.has.outputs.backend == 'true' && hashFiles('scripts/check_contract.py') != ''
+        run: python scripts/check_contract.py
+
+  frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - id: has
+        run: echo "frontend=$([ -f frontend/package.json ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+      - if: steps.has.outputs.frontend == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: "frontend/.nvmrc"
+      - if: steps.has.outputs.frontend == 'true'
+        working-directory: frontend
+        run: |
+          npm ci
+          npm run build
+          npm test

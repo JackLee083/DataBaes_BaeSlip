@@ -1,0 +1,172 @@
+{
+  "checks": [
+    {
+      "check_id": "r1-abc-cafe-2026-09-01",
+      "rule": "R1",
+      "severity": "review",
+      "title": "Pay may be below the minimum rate",
+      "period_start": "2026-09-01",
+      "period_end": "2026-09-14",
+      "expected_cents": 66100,
+      "actual_cents": 44000,
+      "difference_cents": 22100,
+      "facts": {
+        "source_id": "abc-cafe",
+        "source_label": "Hospitality (casual)",
+        "hours": 20,
+        "min_hourly_cents": 3305,
+        "effective_hourly_cents": 2200,
+        "gross_cents": 44000,
+        "actual_basis": "stp_income_statement",
+        "paid_on": "2026-09-16",
+        "note": "Uses the national minimum casual rate; your award may set a different rate."
+      },
+      "possible_explanations": [
+        "A different award or agreement may apply to this job.",
+        "There may be deductions you agreed to.",
+        "The hours you worked may differ from the roster.",
+        "Some hours may belong to a different pay period."
+      ],
+      "next_steps": [
+        "Check your award rate with the Fair Work Ombudsman Pay Calculator.",
+        "Keep your rosters, clock-in records and payslips.",
+        "A union or community legal centre can help for free.",
+        "Asking about your pay cannot get your visa cancelled by your employer."
+      ]
+    },
+    {
+      "check_id": "r2-delivery-co-2026-09-07",
+      "rule": "R2",
+      "severity": "review",
+      "title": "Delivery pay may be below the minimum for engaged time",
+      "period_start": "2026-09-07",
+      "period_end": "2026-09-13",
+      "expected_cents": 28170,
+      "actual_cents": 25000,
+      "difference_cents": 3170,
+      "facts": {
+        "source_id": "delivery-co",
+        "source_label": "Food delivery platform",
+        "engaged_minutes": 540,
+        "engaged_hours": 9.0,
+        "min_per_engaged_hour_cents": 3130,
+        "payout_cents": 25000,
+        "paid_on": "2026-09-14",
+        "limitations": [
+          "Platform exports may not include engaged time.",
+          "How the minimum is calculated should be checked against the FWC decision."
+        ]
+      },
+      "possible_explanations": [
+        "The platform may count engaged time differently.",
+        "Tips or adjustments may be paid in a different week.",
+        "The minimum may differ for your vehicle type."
+      ],
+      "next_steps": [
+        "Download your platform earnings and trip history for this week.",
+        "Ask the platform how this week's pay was calculated.",
+        "The Fair Work Ombudsman or a union can help you check the minimum."
+      ]
+    },
+    {
+      "check_id": "r3-abc-cafe-2026-09-16",
+      "rule": "R3",
+      "severity": "review",
+      "title": "Super timing needs review",
+      "period_start": "2026-09-16",
+      "period_end": "2026-09-25",
+      "facts": {
+        "source_id": "abc-cafe",
+        "source_label": "Hospitality (casual)",
+        "payday": "2026-09-16",
+        "deadline": "2026-09-25",
+        "business_days": 7,
+        "received_on": "2026-09-28",
+        "super_amount_cents": 5280,
+        "note": "Weekends are skipped; public holidays are not.",
+        "business_days_late": 1
+      },
+      "possible_explanations": [
+        "The super fund may have taken extra days to process the payment.",
+        "The employer may use a clearing house that adds delay."
+      ],
+      "next_steps": [
+        "Check the contribution date in your super fund account.",
+        "Ask your employer when the contribution was sent.",
+        "If it keeps happening, the ATO or a union can help."
+      ]
+    },
+    {
+      "check_id": "r4-all-2026-09-28",
+      "rule": "R4",
+      "severity": "warning",
+      "title": "Planned shifts may take you over 48 hours in 14 days",
+      "period_start": "2026-09-28",
+      "period_end": "2026-10-11",
+      "facts": {
+        "window_start": "2026-09-28",
+        "window_end": "2026-10-11",
+        "total_hours": 50,
+        "limit_hours": 48,
+        "warn_hours": 44,
+        "status": "over",
+        "planned_shifts": [
+          {
+            "date": "2026-09-30",
+            "source_id": "abc-cafe",
+            "hours": 8
+          },
+          {
+            "date": "2026-10-01",
+            "source_id": "abc-cafe",
+            "hours": 8
+          },
+          {
+            "date": "2026-10-03",
+            "source_id": "abc-cafe",
+            "hours": 6
+          },
+          {
+            "date": "2026-10-04",
+            "source_id": "abc-cafe",
+            "hours": 4
+          },
+          {
+            "date": "2026-10-05",
+            "source_id": "abc-cafe",
+            "hours": 4
+          },
+          {
+            "date": "2026-10-07",
+            "source_id": "abc-cafe",
+            "hours": 6
+          },
+          {
+            "date": "2026-10-09",
+            "source_id": "abc-cafe",
+            "hours": 4
+          },
+          {
+            "date": "2026-10-10",
+            "source_id": "abc-cafe",
+            "hours": 6
+          },
+          {
+            "date": "2026-10-11",
+            "source_id": "abc-cafe",
+            "hours": 4
+          }
+        ],
+        "counts_platform_online_time": true
+      },
+      "possible_explanations": [
+        "Some planned shifts may still change.",
+        "Platform online time is counted conservatively; the official method may count fewer hours."
+      ],
+      "next_steps": [
+        "Adjust next week's roster so no 14-day window goes over 48 hours.",
+        "Check the Home Affairs work-hours rules for student visas."
+      ]
+    }
+  ]
+}

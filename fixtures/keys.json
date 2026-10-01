@@ -1,0 +1,9 @@
+{
+  "keys": [
+    {
+      "key_id": "k1",
+      "alg": "Ed25519",
+      "public_key": "vcAUboA0GZaMbagXRP2d9DkdOFAfC9up5S8HqUfAtD4="
+    }
+  ]
+}

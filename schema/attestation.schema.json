@@ -1,0 +1,340 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "AttSource": {
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "type": {
+          "$ref": "#/$defs/SourceType"
+        },
+        "tier": {
+          "$ref": "#/$defs/Tier"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "title": "Evidence",
+          "type": "array"
+        },
+        "monthly_median": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Monthly Median"
+        }
+      },
+      "required": [
+        "label",
+        "type",
+        "tier",
+        "evidence"
+      ],
+      "title": "AttSource",
+      "type": "object"
+    },
+    "Coverage": {
+      "additionalProperties": false,
+      "properties": {
+        "months_with_data": {
+          "title": "Months With Data",
+          "type": "integer"
+        },
+        "months_in_period": {
+          "title": "Months In Period",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "months_with_data",
+        "months_in_period"
+      ],
+      "title": "Coverage",
+      "type": "object"
+    },
+    "Evidence": {
+      "description": "Kinds of evidence. Declaration order is the canonical display order: a\nsource-level evidence list is the set of kinds on its records, sorted in this order.",
+      "enum": [
+        "stp_income_statement",
+        "notice_of_assessment",
+        "platform_statement",
+        "payer_confirmed_invoice",
+        "invoice",
+        "bank_deposit",
+        "self_reported"
+      ],
+      "title": "Evidence",
+      "type": "string"
+    },
+    "Issuer": {
+      "additionalProperties": false,
+      "properties": {
+        "issuer_id": {
+          "title": "Issuer Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "key_id": {
+          "title": "Key Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "issuer_id",
+        "name",
+        "key_id"
+      ],
+      "title": "Issuer",
+      "type": "object"
+    },
+    "MoneyRange": {
+      "additionalProperties": false,
+      "properties": {
+        "low": {
+          "title": "Low",
+          "type": "integer"
+        },
+        "high": {
+          "title": "High",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "low",
+        "high"
+      ],
+      "title": "MoneyRange",
+      "type": "object"
+    },
+    "MonthAmount": {
+      "additionalProperties": false,
+      "properties": {
+        "month": {
+          "title": "Month",
+          "type": "string"
+        },
+        "amount": {
+          "title": "Amount",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "month",
+        "amount"
+      ],
+      "title": "MonthAmount",
+      "type": "object"
+    },
+    "Period": {
+      "additionalProperties": false,
+      "properties": {
+        "start": {
+          "format": "date",
+          "title": "Start",
+          "type": "string"
+        },
+        "end": {
+          "format": "date",
+          "title": "End",
+          "type": "string"
+        }
+      },
+      "required": [
+        "start",
+        "end"
+      ],
+      "title": "Period",
+      "type": "object"
+    },
+    "Scope": {
+      "description": "Disclosure scope. Only `rental` is served by the API; `lending` is spec-only.",
+      "enum": [
+        "rental",
+        "lending"
+      ],
+      "title": "Scope",
+      "type": "string"
+    },
+    "Signature": {
+      "additionalProperties": false,
+      "properties": {
+        "alg": {
+          "const": "Ed25519",
+          "default": "Ed25519",
+          "title": "Alg",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "Signature",
+      "type": "object"
+    },
+    "SourceType": {
+      "enum": [
+        "employment",
+        "platform",
+        "contract",
+        "overseas_contract",
+        "cash"
+      ],
+      "title": "SourceType",
+      "type": "string"
+    },
+    "Subject": {
+      "additionalProperties": false,
+      "properties": {
+        "display_name": {
+          "title": "Display Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "display_name"
+      ],
+      "title": "Subject",
+      "type": "object"
+    },
+    "Summary": {
+      "additionalProperties": false,
+      "properties": {
+        "currency": {
+          "default": "AUD",
+          "title": "Currency",
+          "type": "string"
+        },
+        "monthly_income_range": {
+          "$ref": "#/$defs/MoneyRange"
+        },
+        "monthly_median": {
+          "title": "Monthly Median",
+          "type": "integer"
+        },
+        "coverage": {
+          "$ref": "#/$defs/Coverage"
+        }
+      },
+      "required": [
+        "monthly_income_range",
+        "monthly_median",
+        "coverage"
+      ],
+      "title": "Summary",
+      "type": "object"
+    },
+    "Tier": {
+      "description": "Evidence tier. A: reported to government by a third party. B: confirmed by the\npayer. C: matched to a bank deposit. D: self-reported only.",
+      "enum": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "title": "Tier",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "description": "BaeSlip income attestation, spec 0.1.\n\nSigned content: the whole object except `signature`, as canonical JSON (keys\nsorted, no whitespace, UTF-8, null optional fields omitted), signed with Ed25519.\nStatus (valid / expired / revoked) is not signed; the issuer reports it live.\nNever contains hours, visa status, individual transactions or integrity-check results.",
+  "properties": {
+    "spec_version": {
+      "const": "0.1",
+      "default": "0.1",
+      "title": "Spec Version",
+      "type": "string"
+    },
+    "attestation_id": {
+      "title": "Attestation Id",
+      "type": "string"
+    },
+    "scope": {
+      "$ref": "#/$defs/Scope"
+    },
+    "subject": {
+      "$ref": "#/$defs/Subject"
+    },
+    "issuer": {
+      "$ref": "#/$defs/Issuer"
+    },
+    "period": {
+      "$ref": "#/$defs/Period"
+    },
+    "sources": {
+      "items": {
+        "$ref": "#/$defs/AttSource"
+      },
+      "title": "Sources",
+      "type": "array"
+    },
+    "summary": {
+      "$ref": "#/$defs/Summary"
+    },
+    "monthly_series": {
+      "anyOf": [
+        {
+          "items": {
+            "$ref": "#/$defs/MonthAmount"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Monthly Series"
+    },
+    "issued_at": {
+      "format": "date-time",
+      "title": "Issued At",
+      "type": "string"
+    },
+    "expires_at": {
+      "format": "date-time",
+      "title": "Expires At",
+      "type": "string"
+    },
+    "signature": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Signature"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    }
+  },
+  "required": [
+    "attestation_id",
+    "scope",
+    "subject",
+    "issuer",
+    "period",
+    "sources",
+    "summary",
+    "issued_at",
+    "expires_at"
+  ],
+  "title": "Attestation",
+  "type": "object"
+}

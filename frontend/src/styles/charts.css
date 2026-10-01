@@ -1,0 +1,46 @@
+/* Hand-written SVG charts: RangeBar and MonthlyChart. Colours come from the
+   custom properties in index.css. */
+.range-bar { margin: 0.5rem 0 1rem; max-width: 32rem; }
+.range-bar svg { display: block; width: 100%; height: 2.25rem; }
+.range-bar__track { fill: var(--tier-d-bg); }
+.range-bar__band { fill: var(--tier-b-bg); }
+.range-bar__median { stroke: var(--text); stroke-width: 3; vector-effect: non-scaling-stroke; }
+.range-bar__labels {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.25rem 0.75rem;
+  margin: 0.25rem 0 0;
+  padding: 0;
+  font-size: 0.875rem;
+  color: var(--text);
+}
+
+.monthly-chart { margin: 0.5rem 0 1rem; max-width: 32rem; }
+.monthly-chart svg { display: block; width: 100%; height: auto; max-height: 220px; }
+.monthly-chart__bar { fill: var(--tier-b-bg); }
+.monthly-chart__cash { stroke: var(--text); stroke-width: 1; }
+.monthly-chart__baseline { stroke: var(--border); stroke-width: 1; }
+.monthly-chart text { fill: var(--text); font-size: 11px; font-family: inherit; }
+.monthly-chart__value { font-weight: 600; }
+.monthly-chart__cash-label { font-size: 10px; }
+.monthly-chart__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+  margin: 0.25rem 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.875rem;
+}
+.monthly-chart__legend li { display: flex; align-items: center; gap: 0.4rem; }
+.monthly-chart__swatch {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid var(--text);
+  background: var(--tier-b-bg);
+}
+.monthly-chart__swatch--cash {
+  background: repeating-linear-gradient(45deg, var(--tier-d-bg) 0 3px, var(--text) 3px 4px);
+}

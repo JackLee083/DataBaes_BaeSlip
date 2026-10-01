@@ -1,0 +1,9 @@
+# Direct dependencies, pinned exactly. Edit this file, then regenerate the lock:
+#   uv pip compile --universal --python-version 3.11 backend/requirements.in -o backend/requirements.txt
+fastapi==0.141.1
+uvicorn[standard]==0.54.0
+pydantic==2.13.5
+cryptography==50.0.1
+anthropic==1.9.0
+pytest==9.1.1
+httpx==0.28.1  # FastAPI TestClient

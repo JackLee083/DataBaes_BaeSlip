@@ -1,0 +1,45 @@
+.check-card {
+  border: 1px solid #d7dde5;
+  border-left: 4px solid #7a8694;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+.check-card--review { border-left-color: #b7791f; }
+.check-card--warning { border-left-color: #b45309; }
+.check-card--info { border-left-color: #2563eb; }
+
+.check-card__summary > * { margin: 0; }
+.check-card__summary h2 { font-size: 1.1rem; line-height: 1.35; margin-top: 0.25rem; }
+.check-card__rule, .check-card__severity, .check-card__period { color: #4b5563; font-size: 0.9rem; }
+.check-card__severity { align-items: center; display: flex; font-weight: 600; gap: 0.35rem; margin-top: 0.5rem; }
+.check-card__severity-icon { font-size: 1.1rem; line-height: 1; width: 1em; }
+.check-card--info .check-card__severity { color: #1d4ed8; }
+.check-card--review .check-card__severity { color: #8a570d; }
+.check-card--warning .check-card__severity { color: #9a3412; }
+.check-card__figure { font-size: 1.4rem; font-weight: 700; line-height: 1.25; margin-top: 0.5rem; }
+.check-card__period { margin-top: 0.25rem; }
+
+.check-card > button, .check-card__details > summary {
+  min-height: 44px;
+  margin-top: 0.75rem;
+}
+
+.check-card__details > summary { cursor: pointer; display: flex; align-items: center; font-weight: 600; }
+.check-card__details > :not(summary) { margin-top: 0.75rem; }
+.check-card__details .check-money, .check-card__details .check-facts { margin-bottom: 0.75rem; }
+.check-card__details dl { margin: 0; }
+.check-card :is(button, summary):focus-visible { outline: 3px solid #1d4ed8; outline-offset: 3px; }
+
+.check-visual { display: block; height: auto; margin-top: 0.5rem; max-width: 26rem; width: 100%; }
+.check-visual__text { fill: var(--text, #172033); font-size: 11px; }
+.check-visual__text--strong { font-size: 12px; font-weight: 700; }
+.check-visual__track { fill: var(--tier-d-bg, #e5e7eb); stroke: var(--border, #d6dce5); }
+.check-visual__bar--expected { fill: var(--tier-a-bg, #14532d); }
+.check-visual__bar--actual { fill: #b45309; }
+.check-visual__axis { stroke: var(--border, #d6dce5); stroke-width: 3; }
+.check-visual__late { stroke: #b45309; stroke-width: 3; }
+.check-visual__marker { stroke: var(--text, #172033); stroke-width: 2; }
+.check-visual__marker--warn { stroke-dasharray: 3 2; }
+.check-visual__dot { fill: var(--tier-a-bg, #14532d); }
+.check-visual__dot--late { fill: #b45309; }

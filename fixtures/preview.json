@@ -1,0 +1,124 @@
+{
+  "included": [
+    {
+      "key": "subject",
+      "label": "Your display name (Mei L.)"
+    },
+    {
+      "key": "sources",
+      "label": "Income source names, types and evidence tiers"
+    },
+    {
+      "key": "monthly_income_range",
+      "label": "Monthly income range"
+    },
+    {
+      "key": "monthly_median",
+      "label": "Median monthly income"
+    },
+    {
+      "key": "coverage",
+      "label": "Months with data (coverage)"
+    },
+    {
+      "key": "period",
+      "label": "Period the proof covers"
+    },
+    {
+      "key": "issuer",
+      "label": "Issuer, issue date and expiry date"
+    }
+  ],
+  "excluded": [
+    {
+      "key": "hours",
+      "label": "Hours and shifts",
+      "reason": "never"
+    },
+    {
+      "key": "visa",
+      "label": "Visa status",
+      "reason": "never"
+    },
+    {
+      "key": "transactions",
+      "label": "Individual transactions and bank deposits",
+      "reason": "never"
+    },
+    {
+      "key": "checks",
+      "label": "Integrity check results (for example, possible underpayment)",
+      "reason": "never"
+    },
+    {
+      "key": "monthly_series",
+      "label": "Income for each month",
+      "reason": "scope"
+    },
+    {
+      "key": "source_amounts",
+      "label": "Income from each source",
+      "reason": "scope"
+    }
+  ],
+  "attestation": {
+    "spec_version": "0.1",
+    "attestation_id": "preview",
+    "scope": "rental",
+    "subject": {
+      "display_name": "Mei L."
+    },
+    "issuer": {
+      "issuer_id": "baeslip-demo",
+      "name": "BaeSlip Demo Issuer",
+      "key_id": "k1"
+    },
+    "period": {
+      "start": "2026-04-01",
+      "end": "2026-09-30"
+    },
+    "sources": [
+      {
+        "label": "Hospitality (casual)",
+        "type": "employment",
+        "tier": "A",
+        "evidence": [
+          "stp_income_statement",
+          "bank_deposit"
+        ]
+      },
+      {
+        "label": "Food delivery platform",
+        "type": "platform",
+        "tier": "B",
+        "evidence": [
+          "platform_statement",
+          "bank_deposit"
+        ]
+      },
+      {
+        "label": "Overseas design contracts",
+        "type": "overseas_contract",
+        "tier": "C",
+        "evidence": [
+          "invoice",
+          "bank_deposit"
+        ]
+      }
+    ],
+    "summary": {
+      "currency": "AUD",
+      "monthly_income_range": {
+        "low": 2300,
+        "high": 3100
+      },
+      "monthly_median": 2700,
+      "coverage": {
+        "months_with_data": 6,
+        "months_in_period": 6
+      }
+    },
+    "issued_at": "2026-09-29T10:00:00+10:00",
+    "expires_at": "2026-10-29T10:00:00+10:00"
+  }
+}

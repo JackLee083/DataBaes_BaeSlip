@@ -1,0 +1,46 @@
+.add-data-page {
+  display: block;
+  width: min(100%, 48rem);
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.add-data-note {
+  margin: 0 0 1rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #a16207;
+  border-left-width: 0.4rem;
+  border-radius: 0.5rem;
+  background: #fef3c7;
+  color: #3b2f00;
+  font-weight: 600;
+}
+
+.add-data-list {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0 0 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.add-data-row {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--surface);
+  color: var(--text);
+}
+
+.add-data-row h2 { font-size: 1.15rem; }
+.add-data-row p { margin: 0 0 0.5rem; }
+
+.add-data-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+}
+
+.add-data-status { font-weight: 700; }

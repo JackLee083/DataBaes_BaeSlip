@@ -1,0 +1,43 @@
+.verify-page {
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.verify-page section {
+  margin-block: 1.5rem;
+}
+
+.verify-page h2 {
+  margin-bottom: 0.75rem;
+}
+
+.verify-page p {
+  margin-block: 0.5rem;
+}
+
+.verify-page .verify-sources ul {
+  display: grid;
+  gap: 0.75rem;
+  padding: 0;
+  list-style: none;
+}
+
+.verify-page .verify-source {
+  display: grid;
+  gap: 0.25rem;
+  padding: 0.875rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+}
+
+.verify-page .verify-source__label {
+  font-weight: 700;
+}
+
+.verify-page .verify-source__tier {
+  width: fit-content;
+}
+
+.verify-page .verify-source__evidence {
+  color: #374151;
+}
