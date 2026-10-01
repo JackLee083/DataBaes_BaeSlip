@@ -1,6 +1,6 @@
 # BaeSlip
 
-[![ci](https://github.com/JackLee083/DataBaes_BaeSlip/actions/workflows/ci.yml/badge.svg)](https://github.com/JackLee083/DataBaes_BaeSlip/actions/workflows/ci.yml)
+[![ci](https://github.com/JackLee083/DataBaes_BaeSlip/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/JackLee083/DataBaes_BaeSlip/actions/workflows/ci.yml)
 
 **Income that institutions can read.**
 
@@ -294,7 +294,7 @@ What this demo does not do, stated plainly:
 |---|---|
 | [Jack Lee](https://github.com/JackLee083) | Designed the AI agent workflow: split the work across agents, built the shared harness and prompts every agent used, and set the rules that kept their code consistent. Ran Claude-1 (contract and backend core) and Codex-3 (independent review of every plan), and finished the backend half of the rename to BaeSlip. Manual testing. |
 | [Tzu-Hsun Hsu](https://github.com/tzuhsunhsu) | First draft of the product concept. Ran Codex-2 (visual system, Mei's timeline and the check cards) and, in the readability round, the agent for the check cards and verify page. Started the backend half of the rename to BaeSlip. Manual testing. |
-| [alicezihyi](https://github.com/alicezihyi) | First draft of the product concept. Pitch slides. Ran Claude-2 (mock data, evidence tiers, deposit matching and the income summary) and the agent for the worker app's readability round. |
+| [Alice Tseng](https://github.com/alicezihyi) | First draft of the product concept. Pitch slides. Ran Claude-2 (mock data, evidence tiers, deposit matching and the income summary) and the agent for the worker app's readability round. |
 | [Yi-Ting Huang](https://github.com/yiitiing) | Ran Codex-1 (integrity checks R1 to R4 and the AI explanation) and, in the rename round, the agent for the frontend. Pitch slides. Manual testing. |
 | [Pin Ju Chiu](https://github.com/pinjuchiu) | Cryptography and the security of the signed proofs. Ran Claude-3 (frontend scaffold, API client, share flow, verify page and spec page). |
 
