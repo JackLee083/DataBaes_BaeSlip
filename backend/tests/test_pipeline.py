@@ -1,4 +1,4 @@
-"""Tier + matching pipeline on the real mei.json (BUILD_GUIDE 5.1-5.2)."""
+"""Tier + matching pipeline on the real mei.json."""
 
 import json
 from pathlib import Path

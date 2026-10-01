@@ -1,5 +1,5 @@
 """Plain-language explanation of one Check; AI rewords only, template fallback.
-Owner: rules (B13). interfaces.explain_check delegates here."""
+interfaces.explain_check delegates here."""
 
 import os
 

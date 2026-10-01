@@ -1,4 +1,4 @@
-"""Load mock worker data. Owner: data (B1)."""
+"""Load mock worker data."""
 
 import re
 from pathlib import Path

@@ -61,13 +61,13 @@ She has a private worry too. Twenty rostered hours at the cafe paid her **$440**
 | **C** | Matched to a bank deposit | An invoice whose payment is found in the bank feed |
 | **D** | Self-reported only | Cash work the worker records themselves |
 
-A source's tier is the **weakest** tier across its months. Tier D income is shown to the worker but left out of the proof.
+A source's tier is the **weakest** tier across its records. Tier D income is shown to the worker but left out of the proof.
 
 ### Why it matters
 
-- **1,049,100** Australians held more than one job in the June 2026 quarter, a record 6.9% of employed people ([ABS Labour Account](https://www.abs.gov.au/statistics/labour/labour-accounts/labour-account-australia/latest-release)).
+- **1,049,100** people held more than one job in Australia in the June 2026 quarter, 6.9% of employed people ([ABS Labour Account](https://www.abs.gov.au/statistics/labour/labour-accounts/labour-account-australia/latest-release)).
 - **61%** of casual employees have no guaranteed minimum hours ([ABS Working arrangements, Aug 2025](https://www.abs.gov.au/statistics/labour/earnings-and-working-conditions/working-arrangements/latest-release)).
-- **65%** of temporary-visa employees in the 2026 *Off the Books* survey (9,889 respondents, about 80% international students) were paid below their legal entitlement ([UNSW](https://www.unsw.edu.au/newsroom/news/2026/05/survey-hidden-system-migrant-worker-exploitation)).
+- **65%** of the 5,469 temporary-visa workers in the 2026 *Off the Books* survey who did not work on an ABN were paid less than their minimum entitlements under the Fair Work Act ([Migrant Justice Institute report](https://www.migrantjustice.org/off-the-books)).
 
 People like Mei are not shut out because they earn too little. They are shut out because no institution can read what they earn.
 
@@ -89,7 +89,7 @@ More technical limits are listed under [Status and limitations](#status-and-limi
 flowchart LR
     WORKER["<b>Worker app</b><br/>timeline, private checks,<br/>share and revoke"]
 
-    EV["<b>Evidence</b><br/>A: STP statement<br/>B: platform statement<br/>C: bank deposits<br/>D: self-reported"]
+    EV["<b>Evidence</b><br/>A: myGov income statement<br/>(worker-supplied)<br/>B: platform statement<br/>C: bank deposits<br/>D: self-reported"]
 
     subgraph ISSUER["Issuer service (FastAPI)"]
         TL["Timeline and<br/>evidence tiers"]
@@ -171,8 +171,8 @@ These are prompts to look closer, not accusations. Wording is limited to *may*, 
 Requires Python 3.11 (or [uv](https://docs.astral.sh/uv/), which installs it for you) and Node 22.
 
 ```bash
-git clone https://github.com/tzuhsunhsu/DataBae_BaeSlip.git
-cd DataBae_BaeSlip
+git clone https://github.com/JackLee083/DataBaes_BaeSlip.git
+cd DataBaes_BaeSlip
 bash scripts/setup.sh          # installs pinned dependencies, runs the contract check and all tests
 ```
 
@@ -230,6 +230,28 @@ To see the AI explanation instead of the template text, add `ANTHROPIC_API_KEY` 
 | GET | `/attestations/{id}/verify` | Live status and the signed proof |
 | POST | `/attestations/{id}/revoke` | Revoke a proof |
 | GET | `/.well-known/baeslip-keys.json` | Issuer public keys, so anyone can verify signatures |
+
+## How we built it
+
+We built BaeSlip during the hackathon as a small human team directing AI coding agents. The people made the product decisions, approved every plan, and merged and tested the work; the agents implemented the plans, test-first.
+
+| Agent | Tool and models | What it built |
+|---|---|---|
+| Claude-1 | [Claude Code](https://claude.com/claude-code): Claude Opus 5.5 to plan, Claude Sonnet 5.5 subagents to build | The contract (Pydantic models, JSON Schema, fixtures), signing, proof builder, proof store and API |
+| Claude-2 | Claude Code, same models | Mock data, evidence tiers, deposit matching and the income summary |
+| Claude-3 | Claude Code, same models | Frontend scaffold, API client, share flow, verify page and spec page |
+| Codex-1 | OpenAI Codex: GPT-6 SOL to plan, GPT-5.6 Terra to build | Integrity checks R1 to R4 and the AI explanation |
+| Codex-2 | Codex, same models | Visual system, Mei's timeline and the check cards |
+| Codex-3 | Codex | Reviewer only: reviewed every plan and the contract |
+
+How the work was organised:
+
+- **Contract first.** The models, schema and example responses were agreed before anyone built, so backend and frontend could be written in parallel against the same fixtures. `scripts/check_contract.py` keeps them in agreement.
+- **Test-first.** Each task started with a failing test; `scripts/setup.sh` runs the contract check and both test suites.
+- **Review before build.** Every plan was reviewed by another agent (Codex-3 in the first round; Claude and Codex reviewing each other later) before the team approved it.
+- **Later rounds** (readability, the rename to BaeSlip, charts and the "Add your data" page) used the same setup.
+
+The app itself uses the Claude API only to reword a check in plain language; all money, hours and dates are computed by ordinary, tested code.
 
 ## Repository layout
 

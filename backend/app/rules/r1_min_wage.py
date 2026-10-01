@@ -13,7 +13,7 @@ from app.models import Check, Evidence, IncomeRecord, Severity, SourceType, Work
 
 
 def _normalize(name: str) -> str:
-    """Normalize names according to BUILD_GUIDE section 5.2."""
+    """Normalize names for payer matching."""
     normalized = "".join(char for char in name.lower() if char.isalnum() or char == " ")
     for suffix in (" pty ltd", " pty", " ltd", " payroll", " payment"):
         normalized = normalized.replace(suffix, "")

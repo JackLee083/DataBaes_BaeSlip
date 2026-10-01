@@ -1,4 +1,4 @@
-// Tests for ShareFlow (owner: web-verify, F5). api.js is mocked with the real fixtures.
+// Tests for ShareFlow. api.js is mocked with the real fixtures.
 import { render, screen, within, fireEvent, waitFor } from '@testing-library/react'
 import { QRCodeSVG } from 'qrcode.react'
 import { beforeEach, describe, expect, it, vi } from 'vitest'

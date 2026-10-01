@@ -1,4 +1,4 @@
-// ShareFlow (owner: web-verify, ticket F5). Preview -> create -> QR. Revoke (wv-5).
+// ShareFlow: preview -> create -> QR -> revoke.
 // Props: workerId (default "mei"), scope (default "rental")
 import { useState } from 'react'
 import { QRCodeSVG } from 'qrcode.react'

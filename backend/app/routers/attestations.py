@@ -1,4 +1,4 @@
-"""Issue, preview, verify and revoke attestations. Owner: core (B10).
+"""Issue, preview, verify and revoke attestations.
 
 Responses omit null fields (response_model_exclude_none) so the attestation on the
 wire is exactly what was signed.

@@ -1,4 +1,4 @@
-// Tests for StatusBadge (owner: web-verify, ticket F2).
+// Tests for StatusBadge.
 import { render, screen } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
 import StatusBadge from './StatusBadge.jsx'

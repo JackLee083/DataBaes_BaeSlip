@@ -1,5 +1,4 @@
-"""Issued attestations in a JSON file: {att_id: {"attestation": {...}, "revoked_at": null}}.
-Owner: core (B10)."""
+"""Issued attestations in a JSON file: {att_id: {"attestation": {...}, "revoked_at": null}}."""
 
 import json
 import os

@@ -1,4 +1,4 @@
-"""Worker-only routes: timeline and integrity checks. Owner: data (B12)."""
+"""Worker-only routes: timeline and integrity checks."""
 
 from fastapi import APIRouter, HTTPException
 

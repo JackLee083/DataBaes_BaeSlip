@@ -1,4 +1,4 @@
-// Tests for the BaeSlip standard spec page (owner: web-verify, ticket F6).
+// Tests for the BaeSlip standard spec page.
 import { render, screen, within } from '@testing-library/react'
 import { describe, expect, it, vi } from 'vitest'
 import schema from '../../../schema/attestation.schema.json'
@@ -32,7 +32,7 @@ describe('Spec page', () => {
     expect(tiers.getByRole('cell', { name: /^confirmed by the payer$/i })).toBeInTheDocument()
     expect(tiers.getByText(/matched to a bank deposit/i)).toBeInTheDocument()
     expect(tiers.getByText(/self-reported only/i)).toBeInTheDocument()
-    expect(tiers.getByText(/weakest month/i)).toBeInTheDocument()
+    expect(tiers.getByText(/weakest record/i)).toBeInTheDocument()
 
     const forbidden = within(container.querySelector('.spec-forbidden'))
     expect(forbidden.getByText(/hours worked/i)).toBeInTheDocument()

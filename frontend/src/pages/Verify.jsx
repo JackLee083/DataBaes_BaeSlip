@@ -1,4 +1,4 @@
-// Landlord verify page for /v/:id (owner: web-verify, ticket F2).
+// Landlord verify page for /v/:id.
 // Shows only the whitelisted rental-scope fields (MVP 4.3); revoked and
 // not-found responses never render income figures or sources.
 import { useCallback, useEffect, useState } from 'react'

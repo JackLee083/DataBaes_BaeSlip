@@ -7,7 +7,7 @@ const TIER_DEFINITIONS = {
   D: 'Self-reported only',
 }
 
-// Also used on the verify page (F2).
+// Also used on the verify page.
 // Props: tier = "A" | "B" | "C" | "D"; variant = "compact" for letter + short label only.
 export default function TierBadge({ tier, variant }) {
   const definition = TIER_DEFINITIONS[tier]

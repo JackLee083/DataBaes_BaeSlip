@@ -1,4 +1,4 @@
-"""POST /checks/{check_id}/explain route (B13). Offline: interfaces are monkeypatched."""
+"""POST /checks/{check_id}/explain route. Offline: interfaces are monkeypatched."""
 
 import json
 from pathlib import Path

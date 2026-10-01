@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Contract check (TN0). Owner: contract (Claude-1).
+"""Contract check.
 
     python scripts/check_contract.py                 # check
     python scripts/check_contract.py --write-schema  # regenerate schema/attestation.schema.json
@@ -90,7 +90,7 @@ FIXTURE_MODELS = {
     "keys.json": m.KeysResponse,
 }
 BANNED_TITLE_WORDS = ("violat", "stole", "steal", "illegal", "breach")
-REQUIRED_TITLE = re.compile(r"\b(may|needs review|unable to verify)\b", re.IGNORECASE)  # BUILD_GUIDE 3.2
+REQUIRED_TITLE = re.compile(r"\b(may|needs review|unable to verify)\b", re.IGNORECASE)
 
 failures: list[str] = []
 

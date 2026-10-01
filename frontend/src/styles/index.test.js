@@ -72,7 +72,7 @@ describe("responsive and accessible styling", () => {
     for (const state of ["valid", "expired", "revoked", "not_found", "invalid"]) {
       expect(css, `status-badge--${state}`).toMatch(new RegExp(`\\.status-badge--${state}`));
     }
-    // StatusBadge renders its own symbol and text (web-verify), so CSS must not add a second symbol.
+    // StatusBadge renders its own symbol and text, so CSS must not add a second symbol.
     expect(css).not.toMatch(/\.status-badge[^{]*::(before|after)[^{]*\{[^}]*content:/);
   });
 

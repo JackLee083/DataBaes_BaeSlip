@@ -1,4 +1,4 @@
-// api.js (owner: web-verify), BUILD_GUIDE §9.1. Pages and components call only
+// api.js: pages and components call only
 // these functions. VITE_USE_FIXTURES (default 'true') returns the committed
 // fixtures/*.json unchanged (one exception: createAttestation rewrites verify_url
 // onto window.location.origin so a phone on the LAN can open it); otherwise requests go to VITE_API_BASE.

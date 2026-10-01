@@ -1,4 +1,4 @@
-"""R3 Payday Super receipt timing. Owner: rules (B6)."""
+"""R3 Payday Super receipt timing."""
 
 from datetime import date, timedelta
 

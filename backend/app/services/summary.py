@@ -1,5 +1,5 @@
-"""Monthly totals, range, median, coverage; the timeline (BUILD_GUIDE 5.3).
-Owner: data (B3, B12). Stub. interfaces.build_timeline and interfaces.summarize_worker
+"""Monthly totals, range, median, coverage; the timeline.
+interfaces.build_timeline and interfaces.summarize_worker
 delegate here."""
 
 import statistics

@@ -1,7 +1,7 @@
 """BaeSlip contract: Pydantic models shared by every area.
 
-Owner: contract (Claude-1). Frozen after TN0. To change anything here, follow
-docs/AGENT_HANDBOOK.md section 2 ("Contract changes").
+Changing a model changes the API contract: update fixtures/ and schema/ together and
+run scripts/check_contract.py.
 
 Conventions
 - Internal money is integer cents (`*_cents`). Attestation money is integer dollars.
@@ -82,7 +82,7 @@ class AttestationStatus(str, Enum):
     not_found = "not_found"
 
 
-# Keys that must never appear anywhere in an attestation (MVP_v2 principle 6).
+# Keys that must never appear anywhere in an attestation.
 FORBIDDEN_ATTESTATION_KEYS = frozenset(
     {
         "hours",
@@ -310,7 +310,7 @@ class WorkerSummary(Strict):
     monthly_series: list[MonthAmount] | None = None  # lending scope only
 
 
-# --- API request and response bodies (BUILD_GUIDE section 8) -----------------------
+# --- API request and response bodies -----------------------
 
 
 class TimelineSource(Strict):

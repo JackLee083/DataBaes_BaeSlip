@@ -1,4 +1,4 @@
-"""Integrity rules R1-R4 (worker only). Owner: rules (B4-B7).
+"""Integrity rules R1-R4 (worker only).
 interfaces.run_all_checks delegates here."""
 
 from app.config import Config

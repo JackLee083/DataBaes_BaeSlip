@@ -1,4 +1,4 @@
-"""R2 delivery minimum per engaged hour. Owner: rules (B7).
+"""R2 delivery minimum per engaged hour.
 
 Uses engaged minutes only (never online minutes). A payout week with no engaged
 minutes, or engaged minutes with no payout row, cannot be verified and emits nothing.

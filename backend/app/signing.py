@@ -1,4 +1,4 @@
-"""Issuer key, canonical JSON, Ed25519 sign and verify. Owner: core (B8)."""
+"""Issuer key, canonical JSON, Ed25519 sign and verify."""
 
 import base64
 import binascii

@@ -1,4 +1,4 @@
-// BaeSlip standard spec page (owner: web-verify, ticket F6). Static and read-only.
+// BaeSlip standard spec page. Static and read-only.
 import { keysUrl } from '../api.js'
 import schema from '../../../schema/attestation.schema.json'
 
@@ -78,7 +78,7 @@ export default function Spec() {
         <ul>
           <li>A record&apos;s tier is its strongest evidence.</li>
           <li>
-            A source&apos;s tier is its weakest month (conservative: we do not pretend to know
+            A source&apos;s tier is its weakest record (conservative: we do not pretend to know
             more).
           </li>
         </ul>

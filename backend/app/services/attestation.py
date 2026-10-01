@@ -1,4 +1,4 @@
-"""Build attestations from a whitelist, never by copying and deleting. Owner: core (B9).
+"""Build attestations from a whitelist, never by copying and deleting.
 
 build_attestation() takes a display name and a WorkerSummary, never a Worker, so hours,
 visa and shifts cannot reach it. Every output field is set explicitly.

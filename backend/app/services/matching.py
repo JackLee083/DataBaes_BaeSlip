@@ -1,4 +1,4 @@
-"""Match income records to bank deposits (BUILD_GUIDE 5.2). Owner: data (B2)."""
+"""Match income records to bank deposits."""
 
 from datetime import timedelta
 

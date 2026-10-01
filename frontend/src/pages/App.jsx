@@ -5,7 +5,7 @@ import ShareFlow from '../components/ShareFlow.jsx'
 import IncomeSummary from '../components/IncomeSummary.jsx'
 import { getChecks, getTimeline } from '../api.js'
 
-// Mei's app for /app (tickets F3, F4). The timeline and checks load
+// Mei's app for /app. The timeline and checks load
 // independently so one failing never blocks the other.
 function useLoad(load) {
   const [state, setState] = useState({ status: 'loading', data: null })

@@ -1,4 +1,4 @@
-// StatusBadge (owner: web-verify, ticket F2).
+// StatusBadge: the verify page status.
 // Shows symbol + text so the state never relies on colour alone.
 // A failed signature overrides "valid" so a tampered record is never shown as Valid.
 const STATES = {

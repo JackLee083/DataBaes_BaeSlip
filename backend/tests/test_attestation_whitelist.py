@@ -1,4 +1,4 @@
-"""B9: attestations are built from a whitelist; nothing else can leak in."""
+"""Attestations are built from a whitelist; nothing else can leak in."""
 
 import json
 from datetime import date, datetime, timedelta, timezone

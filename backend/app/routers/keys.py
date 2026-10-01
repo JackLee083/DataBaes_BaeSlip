@@ -1,4 +1,4 @@
-"""Issuer public keys, so anyone can verify a signature. Owner: core (B11)."""
+"""Issuer public keys, so anyone can verify a signature."""
 
 from fastapi import APIRouter
 

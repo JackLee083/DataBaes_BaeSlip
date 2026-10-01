@@ -74,7 +74,7 @@ describe('route isolation', () => {
     for (const id of ['att_valid', 'att_revoked', 'att_expired', 'att_missing']) {
       verifyAttestation.mockClear()
       const view = renderAt(`/v/${id}`)
-      // The real Verify page (web-verify) calls the API on mount. A placeholder page does not, and
+      // The real Verify page calls the API on mount. A placeholder page does not, and
       // then there is nothing to wait for. When it does, wait for its FINAL state before asserting,
       // so the checks below run against the loaded page and not against "Checking".
       if (verifyAttestation.mock.calls.length > 0) {

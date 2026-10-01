@@ -4,7 +4,7 @@ import Verify from './pages/Verify.jsx'
 import AddData from './pages/AddData.jsx'
 import Spec from './pages/Spec.jsx'
 
-// /app: Mei's app (web-app)   /v/:id: landlord verify page (web-verify)   /spec: standard spec (web-verify)
+// /app: Mei's app   /data: add your data (demo)   /v/:id: landlord verify page   /spec: standard spec
 export default function AppRoutes() {
   return (
     <Routes>

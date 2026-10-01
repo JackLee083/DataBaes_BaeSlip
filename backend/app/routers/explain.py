@@ -1,4 +1,4 @@
-"""POST /checks/{check_id}/explain. Owner: rules (B13)."""
+"""POST /checks/{check_id}/explain."""
 
 from fastapi import APIRouter, HTTPException
 

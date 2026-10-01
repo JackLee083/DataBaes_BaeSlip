@@ -1,4 +1,4 @@
-"""Evidence tiers (BUILD_GUIDE 5.1). Owner: data (B2)."""
+"""Evidence tiers."""
 
 from dataclasses import dataclass
 

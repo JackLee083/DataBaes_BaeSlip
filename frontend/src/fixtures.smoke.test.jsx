@@ -1,4 +1,4 @@
-// Fixture smoke test (wv-8): real routes through the real api.js in fixture mode.
+// Fixture smoke test: real routes through the real api.js in fixture mode.
 // Nothing is mocked except global fetch, which must never be called.
 import { render, screen, fireEvent, waitFor, cleanup } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'

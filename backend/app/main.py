@@ -1,4 +1,4 @@
-"""FastAPI app: CORS, router registration, health. Owner: core."""
+"""FastAPI app: CORS, router registration, health."""
 
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware

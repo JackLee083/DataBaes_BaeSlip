@@ -1,4 +1,4 @@
-// TN1 live smoke (owner: web-verify). Exercises issue -> verify -> SPA page -> revoke -> verify
+// Live smoke test. Exercises issue -> verify -> SPA page -> revoke -> verify
 // against a running backend and Vite dev server. Not part of `npm test`; needs Node >= 22.
 // Run: API_BASE=http://localhost:8000 WORKER_ID=mei node frontend/scripts/tn1-smoke.mjs
 // Backend needs PUBLIC_WEB_URL=<vite origin>; frontend: VITE_USE_FIXTURES=false npm run dev -- --host

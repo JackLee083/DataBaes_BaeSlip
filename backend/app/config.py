@@ -1,4 +1,4 @@
-"""Rule parameters and environment settings. Owner: core.
+"""Rule parameters and environment settings.
 
 Rules receive a Config (`run(worker, cfg)`); nothing else should hard-code these values.
 """
